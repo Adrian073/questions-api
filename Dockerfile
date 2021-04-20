@@ -14,7 +14,7 @@ EXPOSE 8147
 ARG JAR_FILE=target/postgres-api-0.1.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} postgres-api-api.jar
+ADD ${JAR_FILE} postgres-api.jar
 
 # Run the jar file 
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/postgres-api.jar"]
